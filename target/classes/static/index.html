@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnjuTech | Java Full Stack Solutions</title>
+    <meta
+      name="description"
+      content="AnjuTech delivers modern business technology solutions, software development, and digital transformation services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="#home" class="logo" aria-label="AnjuTech home">AnjuTech</a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="badge">JAVA FULL STACK SOLUTIONS</span>
+            <h1>Build Better. Grow Faster.</h1>
+            <p>
+              We help businesses turn ideas into digital products that perform,
+              scale, and create measurable growth across every customer touchpoint.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+          </div>
+          <div class="hero-card" aria-label="Business growth summary">
+            <div class="metric-box">
+              <strong>120+</strong>
+              <span>Projects Delivered</span>
+            </div>
+            <div class="metric-box">
+              <strong>96%</strong>
+              <span>Client Retention</span>
+            </div>
+            <div class="metric-box">
+              <strong>24/7</strong>
+              <span>Support Coverage</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Our Expertise</span>
+            <h2>Technology services designed for growth.</h2>
+          </div>
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-number">01</div>
+              <h3>Web Development</h3>
+              <p>
+                High-performance websites and web applications built for users,
+                speed, accessibility, and business impact.
+              </p>
+            </article>
+            <article class="service-card">
+              <div class="service-number">02</div>
+              <h3>Software Development</h3>
+              <p>
+                Tailored software systems that streamline operations, automate tasks,
+                and help teams work smarter.
+              </p>
+            </article>
+            <article class="service-card">
+              <div class="service-number">03</div>
+              <h3>Digital Solutions</h3>
+              <p>
+                Strategic digital experiences and business technology consulting to
+                support long-term innovation and growth.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section">
+        <div class="container about-layout">
+          <div class="about-content">
+            <span class="eyebrow">ABOUT US</span>
+            <h2>Turning technology into business momentum.</h2>
+            <p>
+              AnjuTech partners with modern businesses to design and deliver digital
+              experiences that improve efficiency, strengthen customer trust, and
+              unlock sustainable growth.
+            </p>
+            <p>
+              From product strategy to scalable web solutions, we combine technical
+              expertise with a clear understanding of business outcomes.
+            </p>
+          </div>
+          <div class="about-panel" aria-label="Company strengths">
+            <div>
+              <strong>Strategy</strong>
+              <span>Business-first digital planning</span>
+            </div>
+            <div>
+              <strong>Delivery</strong>
+              <span>Reliable execution and measurable results</span>
+            </div>
+            <div>
+              <strong>Support</strong>
+              <span>Long-term partnership and optimization</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="container contact-layout">
+          <div class="contact-copy">
+            <span class="eyebrow">Let’s Talk</span>
+            <h2>Start your next digital transformation.</h2>
+            <p>
+              Tell us about your project, your goals, and what challenges you want
+              to solve. We’ll help you turn ideas into clear action.
+            </p>
+          </div>
+
+          <form class="contact-form" action="/contact" method="post">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="input-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="logo">AnjuTech</div>
+        <p>© 2026 AnjuTech. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorRing = document.querySelector('.cursor-ring');
+      let mouseX = 0;
+      let mouseY = 0;
+      let ringX = 0;
+      let ringY = 0;
+
+      document.addEventListener('mousemove', (event) => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        cursorDot.style.left = `${mouseX}px`;
+        cursorDot.style.top = `${mouseY}px`;
+      });
+
+      const animateCursor = () => {
+        ringX += (mouseX - ringX) * 0.18;
+        ringY += (mouseY - ringY) * 0.18;
+        cursorRing.style.left = `${ringX}px`;
+        cursorRing.style.top = `${ringY}px`;
+        requestAnimationFrame(animateCursor);
+      };
+
+      animateCursor();
+
+      const hoverTargets = document.querySelectorAll('a, button, .service-card, .metric-box, .about-panel div, .input-group input, .input-group textarea');
+      hoverTargets.forEach((element) => {
+        element.addEventListener('mouseenter', () => cursorRing.classList.add('cursor-grow'));
+        element.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor-grow'));
+      });
+
+      const scrollLayers = document.querySelectorAll('.hero-card, .service-card, .contact-form, .about-panel');
+
+      const applyScrollMotion = () => {
+        const viewportHeight = window.innerHeight;
+
+        scrollLayers.forEach((layer, index) => {
+          const rect = layer.getBoundingClientRect();
+          const offset = (viewportHeight - rect.top) * 0.08;
+          const translateY = Math.min(Math.max(offset - 40, -30), 30) * (index % 2 === 0 ? 0.65 : 0.45);
+          layer.style.transform = `translateY(${translateY}px)`;
+        });
+      };
+
+      window.addEventListener('scroll', applyScrollMotion, { passive: true });
+      window.addEventListener('load', applyScrollMotion);
+      window.addEventListener('resize', applyScrollMotion);
+    </script>
+  </body>
+</html>
